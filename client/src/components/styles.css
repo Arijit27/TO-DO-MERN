@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.para .tog {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid transparent;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+/* Login and Register Specific Styles */
+.login-container,
+.register-container {
+    text-align: center;
+}
+
+.login-container h2,
+.register-container h2 {
+    font-size: 28px;
+}
+
+.login-container form,
+.register-container form {
+    margin-top: 20px;
+}
+
+
+.register-container p {
+    font-size: 14px;
+    color: #555;
+}
+
+.register-container a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #f44336;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.alert {
+    position: fixed;
+    top: 20px; /* Keep the alert 20px from the top */
+    left: 50%; /* Position the alert in the middle horizontally */
+    transform: translateX(-50%); /* Center the alert using transform */
+    padding: 15px 25px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+}
+
+.alert-success {
+    background-color: #4caf50;
+}
+
+.alert.hide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+

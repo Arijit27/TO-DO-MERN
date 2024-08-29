@@ -1,0 +1,247 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #9e3434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  /* Container holding both halves j*/
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left half containing the animated title */
+.left-half {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  color: white;
+}
+
+/* Right half containing the login/register form */
+.right-half {
+  /* flex: 1;
+  display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Styling the container of the login/register forms */
+.auth-container {
+  width: 100%; /* Full width within the right half */
+  max-width: 500px; /* Maximum width for the form */
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling with 3D rotation */
+.app-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #61dafb;
+  animation: rotate-title 5s infinite linear;
+  perspective: 1000px;
+}
+
+
+  
+  /* Form Styles */
+  .add-task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .task-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .task-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .add-task-btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .add-task-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Task List */
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-title {
+    flex: 1;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  /* Fade Out Animation */
+.task-item.fade-out {
+    opacity: 0;
+    transform: translateY(-10px); /* Slightly move up while fading out */
+  }
+  .edit-btn, .delete-btn, .toggle-btn,.cancel-btn,.save-btn {
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .edit-btn,.save-btn {
+    color: #28a745;
+  }
+  
+  .delete-btn, .cancel-btn{
+    color: #dc3545;
+  }
+  
+  .edit-btn:hover,.save-btn:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .delete-btn:hover,.cancel-btn:hover {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    color:white /* Darker green border on hover */
+  }
+  
+  .toggle-btn:focus {
+    outline: none; /* Remove default focus outline */
+    /* box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);  */
+  }
+/* Task Title Styles */
+.task-title {
+    font-size: 18px; /* Font size */
+    color: #555; /* Text color */
+    display: inline-block; /* Ensure it takes only the needed width */
+  }
+  
+  .task-title.completed {
+    text-decoration: line-through; /* Line-through effect */
+    color: #999; /* Gray color for completed tasks */
+  }
+  .logout-btn{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+  }
+
+  @keyframes rotate-title {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+  /* Media Queries for Responsiveness */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 20px;
+    }
+  
+    .add-task-form {
+      flex-direction: column;
+    }
+  
+    .task-input {
+      margin-bottom: 10px;
+    }
+  
+    .add-task-btn {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .task-title {
+      font-size: 16px;
+    }
+  
+    .edit-btn, .delete-btn {
+      padding: 5px 10px;
+    }
+  }
+  
