@@ -137,9 +137,13 @@ input[type="password"]:focus {
 }
 /* Responsive Design */
 @media (max-width: 600px) {
+    body {
+        overflow: hidden; /* Ensure no vertical scrolling on small screens */
+    }
     .container {
         width: 100%;
         padding: 15px;
+        overflow: hidden; /* Prevent the container from scrolling */
     }
     
     input[type="text"],
@@ -153,4 +157,5 @@ input[type="password"]:focus {
         padding: 8px;
     }
 }
+
 
