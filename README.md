@@ -1,4 +1,4 @@
-# TO - DO AUGMENTIX - MERN 
+# TO - DO  MERN 
 Project url : https://todoinweb.netlify.app
 
 I add an example of .env file in the server folder. Give your own MongoDB url and jwt secret key , start the project from client side via npm start .
